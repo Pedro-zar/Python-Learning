@@ -35,7 +35,7 @@ def verificar_acerto(escolha):
 
 def jogar():
     """Joga o jogo de acertar onde está a bola nos copinhos"""
-    if verificar_acerto(int(input("A bola está no copo 1, 2 ou 3?\n"))-1):
+    if verificar_acerto(int(input("A bola está no copo 1, 2 ou 3?\n")) - 1):
         print("Parabéns, você acertou!")
     else:
         print("Que pena, você errou")
@@ -51,9 +51,9 @@ def myfunc(phrase):
             lista.append(letter.upper())
         else:
             lista.append(letter.lower())
-    result = ''
+    result = ""
     for word in lista:
-        result = result+word
+        result = result + word
 
     return result
 
@@ -73,7 +73,7 @@ def is_equal_words(phrase):
 
 def spy_game(nums):
     """Vê se tem a sequência 007 na lista"""
-    code = [0, 0, 7, '']
+    code = [0, 0, 7, ""]
     for num in nums:
         if num == code[0]:
             code.pop(0)
@@ -83,7 +83,7 @@ def spy_game(nums):
 
 def vol(rad):
     """Retorna o volume da Rad passada"""
-    return 4/3*3.14*(rad**3)
+    return 4 / 3 * 3.14 * (rad ** 3)
 
 
 def ran_check(num, low, high):
@@ -119,13 +119,13 @@ def multiply(numbers) -> float:
 
 def palindrome(phrase) -> bool:
     """Verifica se é um caso de palindromo"""
-    phrase = phrase.replace(' ', '').lower()
+    phrase = phrase.replace(" ", "").lower()
     return phrase == phrase[::-1]
 
 
 def ispangram(str1, alphabet=string.ascii_lowercase):
     """Verifica se é um caso de pangrama"""
-    str1 = str1.lower().replace(' ', '')
+    str1 = str1.lower().replace(" ", "")
     for letter in alphabet:
         if not str1.__contains__(letter):
             return False
@@ -141,19 +141,20 @@ class Line:
 
     def distance(self):
         """Verificar distancia entre os dois pontos da linha"""
-        x_distance = (self.coor2[0] - self.coor1[0])**2
-        y_distance = (self.coor2[1] - self.coor1[1])**2
-        return (x_distance + y_distance)**(1/2)
+        x_distance = (self.coor2[0] - self.coor1[0]) ** 2
+        y_distance = (self.coor2[1] - self.coor1[1]) ** 2
+        return (x_distance + y_distance) ** (1 / 2)
 
     def slope(self) -> float:
         """verificar a Slope??? da linha"""
-        y_slope = self.coor2[1]-self.coor1[1]
-        x_slope = self.coor2[0]-self.coor1[0]
-        return y_slope/x_slope
+        y_slope = self.coor2[1] - self.coor1[1]
+        x_slope = self.coor2[0] - self.coor1[0]
+        return y_slope / x_slope
 
 
 class Cylinder:
     """Cilindro"""
+
     pi = 3.14
 
     def __init__(self, height=1, radius=1):
@@ -162,11 +163,11 @@ class Cylinder:
 
     def volume(self) -> float:
         """Verifica o volume do cilindro"""
-        return self.pi*(self.radius**2)*self.height
+        return self.pi * (self.radius ** 2) * self.height
 
     def surface_area(self) -> float:
         """Verifica o tamanho da face do cilindro"""
-        return (2*self.pi*self.height*self.radius) + (2*self.pi*(self.radius**2))
+        return (2 * self.pi * self.height * self.radius) + (2 * self.pi * (self.radius ** 2))
 
 
 class Account:
